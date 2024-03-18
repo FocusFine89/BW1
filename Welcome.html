@@ -3,13 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/welcome.css" />
+    <title>Welcome Page</title>
   </head>
   <body>
     <header>
       <img src="assets/img/epicode_logo.png" alt="" />
     </header>
+    <main class="mainWelcome">
+      <div class="titleWelcome">
+        <h1>Welcome to</h1>
+        <h2>your exam</h2>
+      </div>
+
+      <div>
+        <h4>Instructions</h4>
+        <p>
+          We don't expect most engineers to know the answers to all of these
+        </p>
+        <p>questions, so don't worry if you're unsure of a few of them.</p>
+      </div>
+      <div>
+        <ul>
+          <li>
+            Each question is <span>timed</span> and can only be
+            <span>answered once</span>.
+          </li>
+          <li>
+            Changing browser tab or opening other windows will
+            <span>invalidate the question</span>.
+          </li>
+          <li>This exam will take approx. <span>0-5 minutes</span>.</li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footerWelcome">
+      <input type="checkbox" name="consenso" class="checkbox" />
+      <label for="consenso"
+        >I promise to answer myself without help from anyone</label
+      >
+      <button onclick="buttonProceed()">PROCEED</button>
+      <p id="campoObb"></p>
+    </footer>
+    <script src="welcome.js"></script>
   </body>
 </html>
