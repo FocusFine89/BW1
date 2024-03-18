@@ -26,6 +26,10 @@
     text-align: center;
   }
 
+  span {
+    margin-inline: 0.3em;
+  }
+
   .input-container {
     margin-top: 2em;
     input {
@@ -34,8 +38,8 @@
       border-bottom: 2px solid #97288c;
       border-inline: none;
       border-top: none;
-      width: 95%;
-      padding: 1em;
+      width: 98%;
+      padding: 0.5em;
     }
   }
 }
