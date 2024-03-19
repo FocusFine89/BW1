@@ -1,15 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/Results.css" />
+    <title>Results</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <img src="assets/img/epicode_logo.png" alt="" />
     </header>
+    <!-- FINE HEADER -->
+    <!-- MAIN -->
+    <main id="results-page">
+      <div class="results">
+        <h1 id="">Results</h1>
+        <p>The summary of your answers:</p>
+      </div>
+
+      <!-- RISPOSTE CORRETTE -->
+      <div class="correct">
+        <h2>Correct</h2>
+        <p class="percentuale">66.7%</p>
+        <p class="questions"><span>4/6 </span>questions</p>
+      </div>
+      <!-- FINE RISPOSTE CORRETTE -->
+
+      <!-- GRAFICO A CIAMBELLA -->
+      <div class="circle-graphic">
+        <canvas id="myChart"></canvas>
+      </div>
+      <!-- FINE GRAFICO A CIAMBELLA -->
+
+      <!-- RISPOSTE SBAGLIATE -->
+      <div class="wrong">
+        <h2>Wrong</h2>
+        <p class="percentuale">33.3%</p>
+        <p class="questions"><span>4/6 </span>questions</p>
+      </div>
+      <!-- FINE RISPOSTE SBAGLIATE -->
+
+      <!-- BOTTONE RATE US -->
+      <div class="rate-us">
+        <button id="rate-us-button">RATE US</button>
+      </div>
+      <!-- FINE BOTTONE -->
+    </main>
+    <!-- FINE MAIN -->
+    <script src="script.js"></script>
   </body>
 </html>
