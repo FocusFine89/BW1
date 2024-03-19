@@ -48,3 +48,10 @@
 .seconds {
   font-size: 1em;
 }
+.text {
+  position: absolute;
+  top: 115px;
+  font-size: 13px;
+  color: white;
+  right: 122px;
+}
