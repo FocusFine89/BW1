@@ -183,18 +183,24 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+
+//DOMANDE
+
 let questionNum = 0;
 const buttonsDiv = document.querySelector(".colum");
 
-for (let i = 0; i < questions[questionNum].length; i++) {
-  for (let j = 0; j < questions[questionNum].incorrect_answers.length; j++) {
-    const buttons = document.createElement("button");
-    buttons.classList.add("button");
-    buttonsDiv.appendChild(buttons);
-    questionNum++;
-  }
-}
-console.log(questions[0].incorrect_answers.length);
+// const generateQuestions = () => {
+//   for (let j = 0; j < questions[questionNum].incorrect_answers.length; j++) {
+//     const buttons = document.createElement("button");
+//     buttons.classList.add("button");
+//     buttonsDiv.appendChild(buttons);
+//     questionNum++;
+//   }
+// };
+// console.log(questions[0].incorrect_answers.length);
+// generateQuestions();
+
+// console.log(questions[0].incorrect_answers.length);
 /*const button = document.querySelectorAll(".button");
 const questionsH = document.querySelector(".transpTitle");
 let questionNum = 0;
