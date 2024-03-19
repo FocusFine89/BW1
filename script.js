@@ -7,7 +7,7 @@ const colorStars = function (indexStar) {
       star.style.stroke = "#00ffff";
       star.style.fill = "#00ffff";
     } else {
-      star.style.stroke = "#0b113b";
+      star.style.stroke = "white";
       star.style.fill = "#0b113b";
     }
   });
