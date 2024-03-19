@@ -45,3 +45,12 @@ const addsStars = function () {
 };
 
 addsStars();
+
+const input = document.getElementById("feedbackInput");
+
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    alert("Thanks for your feedback");
+    input.value = "";
+  }
+});
