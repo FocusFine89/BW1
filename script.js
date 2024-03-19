@@ -54,3 +54,6 @@ input.addEventListener("keypress", function (event) {
     input.value = "";
   }
 });
+
+const button = document.getElementById("btn-info");
+button.addEventListener("click", function () {});
