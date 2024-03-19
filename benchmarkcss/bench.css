@@ -1,10 +1,10 @@
 h1 {
   font-size: 3em;
-  color: aliceblue;
 }
 .transpTitle {
-  color: rgba(255, 255, 255, 0.917);
+  color: white;
 }
+
 .containerMain {
   text-align: center;
 }
@@ -34,7 +34,9 @@ h1 {
   background-color: rgba(255, 255, 255, 0.115);
   color: white;
   font-weight: bold;
-  box-shadow: 10px;
+  box-shadow: -2px -3px 0px 0px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: -2px -3px 0px 0px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: -2px -3px 0px 0px rgba(255, 255, 255, 0.75);
 }
 .footerQuestions {
   justify-content: center;
@@ -42,4 +44,7 @@ h1 {
   flex-direction: row;
   margin-top: 60px;
   color: aliceblue;
+}
+.butt {
+  background-color: rgb(255, 0, 178);
 }

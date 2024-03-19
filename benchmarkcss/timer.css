@@ -21,7 +21,7 @@
 
 .base-timer__path-remaining {
   stroke-width: 10px;
-  stroke-linecap: round;
+  stroke-linecap: square;
   transform: rotate(90deg);
   transform-origin: center;
   transition: 1s linear all;
@@ -51,7 +51,15 @@
 .text {
   position: absolute;
   top: 115px;
-  font-size: 13px;
+  font-size: 10px;
   color: white;
-  right: 122px;
+  right: 128px;
+}
+.reman {
+  position: absolute;
+
+  top: 182px;
+  font-size: 10px;
+  color: white;
+  right: 126px;
 }
