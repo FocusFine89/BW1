@@ -1,5 +1,5 @@
 const buttonProceed = function () {
-  const checkbox = document.querySelector(".checkbox");
+  const checkbox = document.querySelector(".css-checkbox");
   if (checkbox.checked) {
     window.location.href = "Benchmark.html";
   } else {
