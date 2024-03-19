@@ -56,4 +56,7 @@ input.addEventListener("keypress", function (event) {
 });
 
 const button = document.getElementById("btn-info");
-button.addEventListener("click", function () {});
+button.addEventListener("click", function (event) {
+  event.preventDefault();
+  console.log(event);
+});
