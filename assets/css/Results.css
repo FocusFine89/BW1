@@ -23,16 +23,15 @@ main {
 .correct,
 .wrong {
   font-size: 2em;
+  font-family: "Outfit", sans-serif;
 }
 
 .correct {
   margin-right: 3em;
-  font-family: "Outfit", sans-serif;
 }
 
 .wrong {
   margin-left: 3em;
-  font-family: "Outfit", sans-serif;
 }
 
 main .percentuale {
@@ -53,6 +52,7 @@ main .questions {
   padding: 15px 70px;
   border: 2px solid white;
   color: white;
+  margin-top: 1.5em;
   /* -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 255, 255, 0.8);
   box-shadow: 1px 1px 30px 2px rgba(0, 255, 255, 0.8); */
   margin-left: 1em;
@@ -80,9 +80,9 @@ main .questions {
 }
 
 /* The SVG path that displays the timer's progress */
-.base-chart__path-elapsed {
+#base-chart__path-elapsed {
   stroke-width: 15px;
-  stroke: grey;
+  stroke: red;
 }
 
 /* MOSTRA TESTO ALL'INTERNO DEL GRAFICO */
@@ -104,4 +104,24 @@ main .questions {
 
   /* Sort of an arbitrary number; adjust to your liking */
   font-size: 16px;
+}
+
+/* CREAZIONE SECONDO CERCHIO CON I COLORI VERDE E ROSSO */
+.base-chart__path-remaining {
+  /* Just as thick as the original ring */
+  stroke-width: 15px;
+
+  /* Rounds the line endings to create a seamless circle */
+  stroke-linecap: inherit;
+
+  /* Allows the ring to change color when the color value updates */
+  /* stroke: currentColor; */
+}
+
+.results-questions {
+  position: absolute;
+  top: 115px;
+  font-size: 16px;
+  color: white;
+  left: 100;
 }
