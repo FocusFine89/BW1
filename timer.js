@@ -101,7 +101,7 @@ const COLOR_CODES = {
   },
 };
 
-const TIME_LIMIT = 60;
+const TIME_LIMIT = 5;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -265,6 +265,11 @@ const selectAnswer = function (correct, button) {
     } else {
     }
   }, 1000);
+
+  //PASSA ALLA PAGINA DEI RISULTATI
+  if (currentQuestionIndex === questions.length - 1) {
+    window.location.href = "Result.html";
+  }
 };
 
 const disableButtons = function () {
