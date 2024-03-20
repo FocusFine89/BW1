@@ -7,7 +7,7 @@ h1 {
 
 main {
   text-align: center;
-  margin-top: 2em;
+  margin-top: 4em;
   color: white;
   font-size: 1.5em;
   line-height: 2.5em;
@@ -22,17 +22,16 @@ main {
 
 .correct,
 .wrong {
-  font-size: 2em;
+  font-family: "Outfit", sans-serif;
+  font-size: 60px;
 }
 
 .correct {
   margin-right: 3em;
-  font-family: "Outfit", sans-serif;
 }
 
 .wrong {
   margin-left: 3em;
-  font-family: "Outfit", sans-serif;
 }
 
 main .percentuale {
@@ -41,7 +40,7 @@ main .percentuale {
 }
 
 main .questions {
-  font-size: 0.4em;
+  font-size: 16px;
   line-height: 1em;
 }
 
@@ -53,6 +52,7 @@ main .questions {
   padding: 15px 70px;
   border: 2px solid white;
   color: white;
+  margin-top: 1.5em;
   /* -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 255, 255, 0.8);
   box-shadow: 1px 1px 30px 2px rgba(0, 255, 255, 0.8); */
   margin-left: 1em;
@@ -61,4 +61,63 @@ main .questions {
 #rate-us-button:hover {
   -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 255, 255, 0.8);
   box-shadow: 1px 1px 30px 2px rgba(0, 255, 255, 0.8);
+}
+
+/* GRAFICO A CIAMBELLA SVG */
+
+/* Imposto la posizione e la dimensione del grafico */
+.circle-graphic {
+  position: relative;
+  right: 15px;
+  height: 400px;
+  width: 400px;
+}
+
+.base-chart__circle {
+  fill: none;
+  stroke: none;
+}
+
+/* COLORE RISPOSTE NON CORRETTE (ANCHE COLORE PRINCIPALE DEL GRAFICO) */
+#base-chart__path-elapsed {
+  stroke-width: 15px;
+  stroke: #d20094;
+}
+
+/* MOSTRA TESTO ALL'INTERNO DEL GRAFICO */
+.base-chart__label {
+  position: absolute;
+
+  /* GRANDEZZA DELLA LABEL CHE SARà UGUALE A QUELLA DEL CONTENITORE PADRE*/
+  width: 400px;
+  height: 400px;
+
+  /* TESTO ALLINEATO AL CENTRO SOPRA */
+  top: 0;
+  left: 15px;
+
+  /* CREAZIONE DI UN BOX PER CENTRARLO MEGLIO */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+}
+
+/* CREAZIONE SECONDO CERCHIO CON I COLORI VERDE E ROSSO */
+.base-chart__path-remaining {
+  /* imposto la larghezza del svg originale  */
+  stroke-width: 15px;
+
+  /* ARROTONDAMENTO LINEA COME QUELLA DEL SVG ORIGINALE */
+  stroke-linecap: inherit;
+}
+
+/* POSIZIONE DEL TESTO ALL'INTERNO DEL GRAFICO */
+.results-questions {
+  position: absolute;
+  top: 115px;
+  font-size: 16px;
+  color: white;
+  left: 100;
 }
