@@ -22,8 +22,8 @@ main {
 
 .correct,
 .wrong {
-  font-size: 2em;
   font-family: "Outfit", sans-serif;
+  font-size: 60px;
 }
 
 .correct {
@@ -40,7 +40,7 @@ main .percentuale {
 }
 
 main .questions {
-  font-size: 0.4em;
+  font-size: 16px;
   line-height: 1em;
 }
 
@@ -73,51 +73,47 @@ main .questions {
   width: 400px;
 }
 
-/* Removes SVG styling that would hide the time label */
 .base-chart__circle {
   fill: none;
   stroke: none;
 }
 
-/* The SVG path that displays the timer's progress */
+/* COLORE RISPOSTE NON CORRETTE (ANCHE COLORE PRINCIPALE DEL GRAFICO) */
 #base-chart__path-elapsed {
   stroke-width: 15px;
-  stroke: red;
+  stroke: #d20094;
 }
 
 /* MOSTRA TESTO ALL'INTERNO DEL GRAFICO */
 .base-chart__label {
   position: absolute;
 
-  /* Size should match the parent container */
+  /* GRANDEZZA DELLA LABEL CHE SARà UGUALE A QUELLA DEL CONTENITORE PADRE*/
   width: 400px;
   height: 400px;
 
-  /* Keep the label aligned to the top */
+  /* TESTO ALLINEATO AL CENTRO SOPRA */
   top: 0;
   left: 15px;
 
-  /* Create a flexible box that centers content vertically and horizontally */
+  /* CREAZIONE DI UN BOX PER CENTRARLO MEGLIO, (HO USATO FLEXBOX PERCHE SI) */
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* Sort of an arbitrary number; adjust to your liking */
   font-size: 16px;
 }
 
 /* CREAZIONE SECONDO CERCHIO CON I COLORI VERDE E ROSSO */
 .base-chart__path-remaining {
-  /* Just as thick as the original ring */
+  /* imposto la larghezza del svg originale  */
   stroke-width: 15px;
 
-  /* Rounds the line endings to create a seamless circle */
+  /* ARROTONDAMENTO LINEA COME QUELLA DEL SVG ORIGINALE */
   stroke-linecap: inherit;
-
-  /* Allows the ring to change color when the color value updates */
-  /* stroke: currentColor; */
 }
 
+/* POSIZIONE DEL TESTO ALL'INTERNO DEL GRAFICO */
 .results-questions {
   position: absolute;
   top: 115px;
