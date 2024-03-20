@@ -150,6 +150,10 @@ function startTimer() {
     if (timeLeft === 0) {
       onTimesUp(); //FERMA IL TIMER QUANDO ARRIVA A 0
       // resetTimer();
+      currentQuestionIndex++;
+      incorrectAnswers++;
+      showQuestion(questions[currentQuestionIndex]); //VA AVANTI ALLA PROSSIMA DOMANDA SE IL TIMER SCADE DA RIGA 153 A RIGA 156
+      resetTimer();
     }
   }, 1000);
 }
@@ -205,7 +209,6 @@ let incorrectAnswers = 0;
 
 const startQuiz = function () {
   showQuestion(questions[currentQuestionIndex]);
-  // showQuestionNumber();
 };
 
 const showQuestion = function (currentQuestion) {
