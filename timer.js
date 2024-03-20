@@ -183,3 +183,87 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+
+// FUNZIONE PER LE DOMANDE
+
+const questionContainer = document.getElementById("containerTitles");
+const answerButtons = document.getElementById("colum");
+const questionNum = document.getElementById("question-num");
+
+let currentQuestionIndex = 0;
+let correctAnswers = 0;
+let incorrectAnswers = 0;
+
+const startQuiz = function () {
+  showQuestion(questions[currentQuestionIndex]);
+  // showQuestionNumber();
+};
+
+const showQuestion = function (currentQuestion) {
+  questionContainer.innerText = currentQuestion.question;
+  answerButtons.innerHTML = "";
+  if (currentQuestion.type === "multiple") {
+    currentQuestion.incorrect_answers.push(currentQuestion.correct_answer);
+    currentQuestion.incorrect_answers.sort(() => Math.random() - 0.5);
+    currentQuestion.incorrect_answers.forEach((answer) => {
+      const button = document.createElement("button");
+      button.innerText = answer;
+      button.classList.add("button");
+      button.addEventListener("click", () =>
+        selectAnswer(currentQuestion.correct_answer === answer, button)
+      );
+      answerButtons.appendChild(button);
+    });
+  } else if (currentQuestion.type === "boolean") {
+    const trueButton = document.createElement("button");
+    trueButton.innerText = "True";
+    trueButton.classList.add("button");
+    trueButton.addEventListener("click", () =>
+      selectAnswer(currentQuestion.correct_answer === "True", trueButton)
+    );
+    answerButtons.appendChild(trueButton);
+
+    const falseButton = document.createElement("button");
+    falseButton.innerText = "False";
+    falseButton.classList.add("button");
+    falseButton.addEventListener("click", () =>
+      selectAnswer(currentQuestion.correct_answer === "False", falseButton)
+    );
+    answerButtons.appendChild(falseButton);
+  }
+};
+
+const selectAnswer = function (correct, button) {
+  if (correct) {
+    button.classList.add("correct");
+    correctAnswers++;
+  } else {
+    button.classList.add("incorrect");
+    incorrectAnswers++;
+  }
+
+  disableButtons();
+
+  setTimeout(() => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      showQuestion(questions[currentQuestionIndex]);
+    } else {
+    }
+  }, 1000);
+};
+
+const disableButtons = function () {
+  const buttons = document.querySelectorAll(".button");
+  buttons.forEach((button) => {
+    button.disabled = true;
+  });
+};
+
+// const showQuestionNumber = function () {
+//   const questionNumber = document.createElement("span");
+//   questionNumber.innerText = `Question ${i + 1}/${questions.length}`;
+//   questionNum.appendChild(questionNumber);
+// };
+
+startQuiz();
