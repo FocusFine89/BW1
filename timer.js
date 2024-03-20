@@ -101,7 +101,7 @@ const COLOR_CODES = {
   },
 };
 
-const TIME_LIMIT = 5;
+const TIME_LIMIT = 60;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -151,6 +151,7 @@ function startTimer() {
       onTimesUp(); //FERMA IL TIMER QUANDO ARRIVA A 0
       // resetTimer();
       currentQuestionIndex++;
+      indiceQuestion();
       incorrectAnswers++;
       showQuestion(questions[currentQuestionIndex]); //VA AVANTI ALLA PROSSIMA DOMANDA SE IL TIMER SCADE DA RIGA 153 A RIGA 156
       resetTimer();
@@ -260,6 +261,7 @@ const selectAnswer = function (correct, button) {
 
   setTimeout(() => {
     currentQuestionIndex++;
+    indiceQuestion();
     if (currentQuestionIndex < questions.length) {
       showQuestion(questions[currentQuestionIndex]);
     } else {
@@ -286,3 +288,10 @@ const disableButtons = function () {
 // };
 
 startQuiz();
+
+//FUNZIONE INDICE QUESTION
+const indiceQuestion = function () {
+  const question = document.querySelector(".indexDomanda");
+  question.innerText = currentQuestionIndex + 1 + "/" + questions.length;
+};
+indiceQuestion();
