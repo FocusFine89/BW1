@@ -148,9 +148,23 @@ function startTimer() {
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
     if (timeLeft === 0) {
-      onTimesUp();
+      onTimesUp(); //FERMA IL TIMER QUANDO ARRIVA A 0
+      // resetTimer();
+      currentQuestionIndex++;
+      indiceQuestion();
+      incorrectAnswers++;
+      showQuestion(questions[currentQuestionIndex]); //VA AVANTI ALLA PROSSIMA DOMANDA SE IL TIMER SCADE DA RIGA 153 A RIGA 156
+      resetTimer();
     }
   }, 1000);
+}
+
+//RESET TIMER
+function resetTimer() {
+  timeLeft = TIME_LIMIT;
+  timePassed = 0;
+  onTimesUp();
+  startTimer();
 }
 
 function formatTime(time) {
@@ -196,7 +210,6 @@ let incorrectAnswers = 0;
 
 const startQuiz = function () {
   showQuestion(questions[currentQuestionIndex]);
-  // showQuestionNumber();
 };
 
 const showQuestion = function (currentQuestion) {
@@ -244,13 +257,21 @@ const selectAnswer = function (correct, button) {
 
   disableButtons();
 
+  resetTimer(); //RICHIAMO FUNZIONE RESET TIMER
+
   setTimeout(() => {
     currentQuestionIndex++;
+    indiceQuestion();
     if (currentQuestionIndex < questions.length) {
       showQuestion(questions[currentQuestionIndex]);
     } else {
     }
   }, 1000);
+
+  //PASSA ALLA PAGINA DEI RISULTATI
+  if (currentQuestionIndex === questions.length - 1) {
+    window.location.href = "Result.html";
+  }
 };
 
 const disableButtons = function () {
@@ -267,3 +288,10 @@ const disableButtons = function () {
 // };
 
 startQuiz();
+
+//FUNZIONE INDICE QUESTION
+const indiceQuestion = function () {
+  const question = document.querySelector(".indexDomanda");
+  question.innerText = currentQuestionIndex + 1 + "/" + questions.length;
+};
+indiceQuestion();
