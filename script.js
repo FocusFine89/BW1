@@ -58,5 +58,5 @@ input.addEventListener("keypress", function (event) {
 const button = document.getElementById("btn-info");
 button.addEventListener("click", function (event) {
   event.preventDefault();
-  console.log(event);
+  window.open("https://epicode.com/it/", "_blank");
 });
