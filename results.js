@@ -22,3 +22,8 @@ pathRemaining.style.strokeDasharray = `${d} 283`;
 pathRemaining.style.stroke = colorCodes.info.correctColor;
 
 //2.83 EQUIVALE ALL'1% DI 283
+
+//CODICE QUANTE DOMANDE SONO STATE RISPOSTE GIUSTE E QUANTE SBAGLIATE (es.4/6 giuste)
+
+//CODICE PER CALCOLARE LA PERCENTUALE DI RISPOSTE GIUSTE E DI RISPOSTE GIUSTE E SBAGLIATE
+//calcolare la percentuale in base a quante domande ci sono nell'array
