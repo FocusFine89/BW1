@@ -1,3 +1,98 @@
+const questions = [
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question: "What does CPU stand for?",
+    correct_answer: "Central Processing Unit",
+    incorrect_answers: [
+      "Central Process Unit",
+      "Computer Personal Unit",
+      "Central Processor Unit",
+    ],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
+    correct_answer: "Final",
+    incorrect_answers: ["Static", "Private", "Public"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "easy",
+    question: "The logo for Snapchat is a Bell.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "easy",
+    question:
+      "Pointers were not used in the original C programming language; they were added later on in C++.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "What is the most preferred image format used for logos in the Wikimedia database?",
+    correct_answer: ".svg",
+    incorrect_answers: [".png", ".jpeg", ".gif"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question: "In web design, what does CSS stand for?",
+    correct_answer: "Cascading Style Sheet",
+    incorrect_answers: [
+      "Counter Strike: Source",
+      "Corrective Style Sheet",
+      "Computer Style Sheet",
+    ],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "What is the code name for the mobile operating system Android 7.0?",
+    correct_answer: "Nougat",
+    incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question: "On Twitter, what is the character limit for a Tweet?",
+    correct_answer: "140",
+    incorrect_answers: ["120", "160", "100"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "easy",
+    question: "Linux was first created as an alternative to Windows XP.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "Which programming language shares its name with an island in Indonesia?",
+    correct_answer: "Java",
+    incorrect_answers: ["Python", "C", "Jakarta"],
+  },
+];
 const FULL_DASH_ARRAY = 283;
 
 const COLOR_CODES = {
@@ -29,6 +124,8 @@ document.getElementById("app").innerHTML = `
         "
       ></path>
     </g>
+    <span class = 'reman'>REMAINING</span>
+    <span class="text">SECONDS</span>
   </svg>
   <span id="base-timer-label" class="base-timer__label"> ${formatTime(
     timeLeft
@@ -86,3 +183,87 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+
+// FUNZIONE PER LE DOMANDE
+
+const questionContainer = document.getElementById("containerTitles");
+const answerButtons = document.getElementById("colum");
+const questionNum = document.getElementById("question-num");
+
+let currentQuestionIndex = 0;
+let correctAnswers = 0;
+let incorrectAnswers = 0;
+
+const startQuiz = function () {
+  showQuestion(questions[currentQuestionIndex]);
+  // showQuestionNumber();
+};
+
+const showQuestion = function (currentQuestion) {
+  questionContainer.innerText = currentQuestion.question;
+  answerButtons.innerHTML = "";
+  if (currentQuestion.type === "multiple") {
+    currentQuestion.incorrect_answers.push(currentQuestion.correct_answer);
+    currentQuestion.incorrect_answers.sort(() => Math.random() - 0.5);
+    currentQuestion.incorrect_answers.forEach((answer) => {
+      const button = document.createElement("button");
+      button.innerText = answer;
+      button.classList.add("button");
+      button.addEventListener("click", () =>
+        selectAnswer(currentQuestion.correct_answer === answer, button)
+      );
+      answerButtons.appendChild(button);
+    });
+  } else if (currentQuestion.type === "boolean") {
+    const trueButton = document.createElement("button");
+    trueButton.innerText = "True";
+    trueButton.classList.add("button");
+    trueButton.addEventListener("click", () =>
+      selectAnswer(currentQuestion.correct_answer === "True", trueButton)
+    );
+    answerButtons.appendChild(trueButton);
+
+    const falseButton = document.createElement("button");
+    falseButton.innerText = "False";
+    falseButton.classList.add("button");
+    falseButton.addEventListener("click", () =>
+      selectAnswer(currentQuestion.correct_answer === "False", falseButton)
+    );
+    answerButtons.appendChild(falseButton);
+  }
+};
+
+const selectAnswer = function (correct, button) {
+  if (correct) {
+    button.classList.add("correct");
+    correctAnswers++;
+  } else {
+    button.classList.add("incorrect");
+    incorrectAnswers++;
+  }
+
+  disableButtons();
+
+  setTimeout(() => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      showQuestion(questions[currentQuestionIndex]);
+    } else {
+    }
+  }, 1000);
+};
+
+const disableButtons = function () {
+  const buttons = document.querySelectorAll(".button");
+  buttons.forEach((button) => {
+    button.disabled = true;
+  });
+};
+
+// const showQuestionNumber = function () {
+//   const questionNumber = document.createElement("span");
+//   questionNumber.innerText = `Question ${i + 1}/${questions.length}`;
+//   questionNum.appendChild(questionNumber);
+// };
+
+startQuiz();

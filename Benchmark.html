@@ -1,45 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/reset.css" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../benchmarkcss/timer.css" />
-    <link rel="stylesheet" href="../benchmarkcss/bench.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <div style="display: flex; justify-content: space-between">
-        <span> <img src="../assets/img/epicode_logo.png" alt="logo" /></span>
-        <div class="timer"><div id="app"></div></div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/timer.css" />
+  <link rel="stylesheet" href="/assets/css/bench.css" />
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="divTimer">
+      <span> <img src="/assets/img/epicode_logo.png" alt="logo" /></span>
       <div class="timer"><div id="app"></div></div>
-    </header>
+    </div>
+    <div class="timer"><div id="app"></div></div>
+  </header>
 
-    <main>
-      <div class="containerMain">
-        <h1 class="transpTitle">How can I create a</h1>
-        <h1>checkbox in HTML?</h1>
-        <div class="divQuestion">
-          <div class="colum">
-            <button class="button">&lt; input type = "check"&gt;</button>
-            <button class="button">&lt;checkbox &gt;</button>
-          </div>
-          <div class="colum">
-            <button class="button">&lt;input type = "checkbox"' &gt;</button>
-            <button class="button">&lt;input type = "button" &gt;</button>
-          </div>
+  <main>
+    
+    <div class="containerMain">
+      <div id="containerTitles">
+    </div>
+      <div class="divQuestion">
+        <div id="colum">
         </div>
       </div>
-    </main>
-    <footer>
-      <div class="footerQuestions">
-        <p>QUESTION</p>
-      </div>
-    </footer>
-    <script src="js/bench.js"></script>
-    <script src="js/timer.js"></script>
-  </body>
+    </div>
+
+  </main>
+  <footer>
+    <div class="footerQuestions">
+      <p>QUESTION</p>
+    </div>
+  </footer>
+  
+  <script src="timer.js"></script>
+</body>
 </html>
