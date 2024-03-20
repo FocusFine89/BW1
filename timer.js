@@ -148,9 +148,18 @@ function startTimer() {
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
     if (timeLeft === 0) {
-      onTimesUp();
+      onTimesUp(); //FERMA IL TIMER QUANDO ARRIVA A 0
+      // resetTimer();
     }
   }, 1000);
+}
+
+//RESET TIMER
+function resetTimer() {
+  timeLeft = TIME_LIMIT;
+  timePassed = 0;
+  onTimesUp();
+  startTimer();
 }
 
 function formatTime(time) {
@@ -243,6 +252,8 @@ const selectAnswer = function (correct, button) {
   }
 
   disableButtons();
+
+  resetTimer(); //RICHIAMO FUNZIONE RESET TIMER
 
   setTimeout(() => {
     currentQuestionIndex++;
