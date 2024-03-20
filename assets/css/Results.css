@@ -96,7 +96,7 @@ main .questions {
   top: 0;
   left: 15px;
 
-  /* CREAZIONE DI UN BOX PER CENTRARLO MEGLIO, (HO USATO FLEXBOX PERCHE SI) */
+  /* CREAZIONE DI UN BOX PER CENTRARLO MEGLIO */
   display: flex;
   align-items: center;
   justify-content: center;
