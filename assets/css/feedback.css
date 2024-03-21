@@ -66,14 +66,27 @@ button {
   text-align: center;
 }
 
-.thanks-container p {
+.thanks-container {
   font-size: 3em;
   text-align: center;
   line-height: 1.5em;
   color: white;
-  margin-top: 6em;
 }
 
 .btn-information {
   margin-top: 4em;
+}
+
+.thanks-container p {
+  margin-top: 5em;
+}
+
+.thanks-container span {
+  font-size: 0.8em;
+}
+
+.btn-newtry {
+  padding: 10px 20px;
+  margin-left: 2em;
+  font-size: 0.4em;
 }

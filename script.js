@@ -53,8 +53,18 @@ btnFeedback.addEventListener("click", function () {
   document.getElementById("feedback-container").style.display = "none";
   document.getElementById("btn-info").style.display = "inline";
   let feedback = document.createElement("p");
+  let newTry = document.createElement("span");
+  let btnNewTry = document.createElement("button");
   feedback.innerText = "Thanks for your feedback! Hope you enjoyed that!";
+  newTry.innerText = "Do you want try again?";
+  btnNewTry.innerText = "Welcome Page";
+  btnNewTry.classList.add("btn-newtry");
+  btnNewTry.addEventListener("click", function () {
+    window.open("Welcome.html");
+  });
   document.querySelector(".thanks-container").appendChild(feedback);
+  document.querySelector(".thanks-container").appendChild(newTry);
+  document.querySelector(".thanks-container").appendChild(btnNewTry);
   document.getElementById("btn-enter").style.display = "none";
 });
 
