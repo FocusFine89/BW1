@@ -354,6 +354,14 @@ const generateResults = function () {
   //INSERISCO TESTO ALL'INTERNO DEL GRAFICO
   const chartText = document.querySelector(".results-questions");
   const testoColorato = document.querySelector(".colorato");
-  chartText.innerText = `Congratulations`;
-  testoColorato.innerText = `You passed the exam`;
+  const testoCertificato = document.querySelector(".testo-certificato p");
+  if (correctAnswers > 5) {
+    chartText.innerText = `Congratulations!`;
+    testoColorato.innerText = `You passed the exam`;
+    testoCertificato.innerText = `We'll send you the certificate in few minutes.
+  Check your email (including promotions / spam folder)`;
+  } else {
+    chartText.innerText = `Failed!`;
+    testoColorato.innerText = `Not passed the exam`;
+  }
 };
