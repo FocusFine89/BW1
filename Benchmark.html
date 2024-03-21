@@ -1,39 +1,71 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/reset.css" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link rel="stylesheet" href="/assets/css/timer.css" />
-  <link rel="stylesheet" href="/assets/css/bench.css" />
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <div class="divTimer">
-      <span> <img src="/assets/img/epicode_logo.png" alt="logo" /></span>
-      <div class="timer"><div id="app"></div></div>
-    </div>
-    <div class="timer"><div id="app"></div></div>
-  </header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/timer.css" />
+    <link rel="stylesheet" href="/assets/css/bench.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="divTimer">
+        <span> <img src="/assets/img/epicode_logo.png" alt="logo" /> </span>
+        <div class="timer"><div id="app"></div></div>
 
-  <main>
-    
-    <div class="containerMain">
-      <div id="containerTitles">
-    </div>
-      <div class="divQuestion">
-        <div id="colum">
+        <div class="timer">
+          <div id="app">
+            <div class="base-timer">
+              <svg
+                class="base-timer__svg"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g class="base-timer__circle">
+                  <circle
+                    class="base-timer__path-elapsed"
+                    cx="50"
+                    cy="50"
+                    r="45"
+                  ></circle>
+                  <path
+                    id="base-timer-path-remaining"
+                    stroke-dasharray="283"
+                    class="base-timer__path-remaining"
+                    d="
+                  M 50, 50
+                  m -45, 0
+                  a 45,45 0 1,0 90,0
+                  a 45,45 0 1,0 -90,0
+                "
+                  ></path>
+                </g>
+              </svg>
+              <span class="reman">REMAINING</span>
+              <span class="text">SECONDS</span>
+              <span id="base-timer-label" class="base-timer__label"> </span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
 
-  </main>
-  <footer>
-    <div class="footerQuestions">
-      <p>QUESTION <span class="indexDomanda"></span></p>
-    </div>
-  </footer>
-  
-  <script src="timer.js"></script>
-</body>
+    <main>
+      <div class="containerMain">
+        <div id="containerTitles"></div>
+        <div class="divQuestion">
+          <div id="colum"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footerQuestions">
+        <p>QUESTION <span class="indexDomanda"></span></p>
+      </div>
+    </footer>
+
+    <script src="timer.js"></script>
+  </body>
 </html>

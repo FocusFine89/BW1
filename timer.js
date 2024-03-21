@@ -107,7 +107,11 @@ let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 
-document.getElementById("app").innerHTML = `
+const prova = document.getElementById("app");
+const prova2 = document.querySelector("header");
+prova2.appendChild(prova);
+
+/*document.getElementById("app").innerHTML = `
 <div class="base-timer">
   <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <g class="base-timer__circle">
@@ -131,7 +135,7 @@ document.getElementById("app").innerHTML = `
     timeLeft
   )}</span>
 </div>
-`;
+`; */
 
 startTimer();
 
