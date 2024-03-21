@@ -1,3 +1,4 @@
+// WELCOME ZONE
 const buttonProceed = function () {
   const checkbox = document.querySelector(".css-checkbox");
   if (checkbox.checked) {
