@@ -7,6 +7,7 @@
   margin-inline: auto;
   padding-top: 6em;
   padding-bottom: 4em;
+  margin-top: 2.5em;
 
   h1 {
     font-size: 4em;
@@ -43,6 +44,7 @@
       padding: 0.5em;
       color: white;
       font-family: "Inter", sans-serif;
+      font-size: 20px;
     }
   }
 }
@@ -62,4 +64,16 @@ button {
   width: 50%;
   margin-inline: auto;
   text-align: center;
+}
+
+.thanks-container p {
+  font-size: 3em;
+  text-align: center;
+  line-height: 1.5em;
+  color: white;
+  margin-top: 6em;
+}
+
+.btn-information {
+  margin-top: 4em;
 }

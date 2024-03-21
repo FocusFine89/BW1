@@ -46,17 +46,19 @@ const addsStars = function () {
 
 addsStars();
 
-const input = document.getElementById("feedbackInput");
+document.getElementById("btn-info").style.display = "none";
 
-input.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    alert("Thanks for your feedback");
-    input.value = "";
-  }
+const btnFeedback = document.getElementById("btn-enter");
+btnFeedback.addEventListener("click", function () {
+  document.getElementById("feedback-container").style.display = "none";
+  document.getElementById("btn-info").style.display = "inline";
+  let feedback = document.createElement("p");
+  feedback.innerText = "Thanks for your feedback! Hope you enjoyed that!";
+  document.querySelector(".thanks-container").appendChild(feedback);
+  document.getElementById("btn-enter").style.display = "none";
 });
 
-const button = document.getElementById("btn-info");
-button.addEventListener("click", function (event) {
-  event.preventDefault();
+const btnInfo = document.getElementById("btn-info");
+btnInfo.addEventListener("click", function () {
   window.open("https://epicode.com/it/", "_blank");
 });
