@@ -312,6 +312,13 @@ const generateResults = function () {
   rateButton.onclick = () => {
     window.location.href = "Feedback.html";
   };
+  //FINE CODICE DELLA PAGINA BENCHMARK
+
+  //CODICE QUANTE DOMANDE SONO STATE RISPOSTE GIUSTE E QUANTE SBAGLIATE (es.4/6 giuste)
+  const risposteCorrette = document.getElementById("questions-corrette");
+  const risposteSbagliate = document.getElementById("questions-sbagliate");
+  risposteCorrette.innerHTML = `${correctAnswers} / ${questions.length} questions`;
+  risposteSbagliate.innerHTML = `${incorrectAnswers} / ${questions.length} questions`;
 
   //COLORE DELLE RISPOSTE CORRETTE DEL GRAFICO, HO FATTO UN OGGETTO PERCHè ALL'INIZIO PENSAVO SERVISSERO PIù COLORI
   const colorCodes = {
@@ -320,16 +327,33 @@ const generateResults = function () {
     },
   };
 
-  const d = 200; //
+  const d = 2.83 * correctAnswers * 10; //
 
   //IMPORTANTE! MOSTRA PROGRESSO DEL GRAFICO
   pathRemaining.style.strokeDasharray = `${d} 283`;
   pathRemaining.style.stroke = colorCodes.info.correctColor;
 
-  //2.83 EQUIVALE ALL'1% DI 283
+  // console.log(2.83 * correctAnswers * 10);
 
-  //CODICE QUANTE DOMANDE SONO STATE RISPOSTE GIUSTE E QUANTE SBAGLIATE (es.4/6 giuste)
+  //2.83 EQUIVALE ALL'1% DI 283
 
   //CODICE PER CALCOLARE LA PERCENTUALE DI RISPOSTE GIUSTE E DI RISPOSTE GIUSTE E SBAGLIATE
   //calcolare la percentuale in base a quante domande ci sono nell'array
+  const percentuale = questions.length / 100; //da l'1% dell'array questions 0,1
+  const percentualeGraficoGiusta = Math.floor(
+    correctAnswers * percentuale * 100
+  );
+  const percentualeGraficoSbagliata = incorrectAnswers * percentuale * 100;
+  const percentualeCorretta = document.getElementById("percentuale-corretta");
+  const percentualeSbagliata = document.getElementById("percentuale-sbagliata");
+  percentualeCorretta.innerText = `${correctAnswers * 10} %`;
+  percentualeSbagliata.innerText = `${incorrectAnswers * 10} %`;
+  console.log(percentualeGraficoGiusta);
+  console.log(percentualeGraficoSbagliata);
+
+  //INSERISCO TESTO ALL'INTERNO DEL GRAFICO
+  const chartText = document.querySelector(".results-questions");
+  const testoColorato = document.querySelector(".colorato");
+  chartText.innerText = `Congratulations`;
+  testoColorato.innerText = `You passed the exam`;
 };

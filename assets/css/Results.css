@@ -121,3 +121,8 @@ main .questions {
   color: white;
   left: 100;
 }
+
+/* TESTO DEL GRAFICO */
+.colorato {
+  color: #00ffff;
+}
