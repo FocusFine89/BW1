@@ -248,7 +248,7 @@ const showQuestion = function (currentQuestion) {
 
 const selectAnswer = function (correct, button) {
   if (correct) {
-    button.classList.add("correct");
+    button.classList.add("correct2");
     correctAnswers++;
   } else {
     button.classList.add("incorrect");
@@ -271,7 +271,16 @@ const selectAnswer = function (correct, button) {
   //PASSA ALLA PAGINA DEI RISULTATI
   if (currentQuestionIndex === questions.length - 1) {
     onTimesUp(); //prova
-    window.location.href = "Result.html";
+    // window.location.href = "Result.html";
+    let header = document.querySelector("header");
+    let main = document.querySelector("main");
+    let footer = document.querySelector("footer");
+    header.style.display = "none";
+    main.style.display = "none";
+    footer.style.display = "none";
+
+    let prova = document.querySelectorAll(".showBench");
+    prova.forEach((e) => (e.style.display = "block"));
     generateResults();
   }
 };
