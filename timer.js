@@ -149,7 +149,6 @@ function startTimer() {
     setRemainingPathColor(timeLeft);
     if (timeLeft === 0) {
       onTimesUp(); //FERMA IL TIMER QUANDO ARRIVA A 0
-      // resetTimer();
       currentQuestionIndex++;
       indiceQuestion();
       incorrectAnswers++;
@@ -305,7 +304,6 @@ indiceQuestion();
 
 //GENERALE
 const generateResults = function () {
-  const circle = document.getElementById("base-chart__path-elapsed");
   const pathRemaining = document.getElementById("base-chart-path-remaining");
   //REINDIRIZZO ALLA PROSSIMA PAGINA AL CLICK DEL BOTTONE
   const rateButton = document.getElementById("rate-us-button");
