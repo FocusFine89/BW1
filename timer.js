@@ -838,36 +838,45 @@ if (sessionStorage.getItem("difficult") === "Easy") {
   // ha selezionato l'utente nel campo select , in questo caso se l'utente seleziona Easy entrerà successivamente in una di queste 3 condizioni:
   if (sessionStorage.getItem("quantity") === "10") {
     // se ha selezionato easy come difficult e 10 come quantity
-
-    questions = questionEasy.slice(0, -20); // il test avrà solo 10 easy domande al suo interno (uso il metodo slice per "tagliare" la parte di array che mi occorre)
+    questions = questionEasy.slice(0, -20); // il test avrà solo 10 domande easy al suo interno (uso il metodo slice per "tagliare" la parte di array che mi occorre)
   }
   if (sessionStorage.getItem("quantity") === "20") {
-    questions = questionEasy.slice(0, -10);
+    // se ha selezionato easy come difficult e 20 come quantity
+    questions = questionEasy.slice(0, -10); //il test avrà solo 20 domande easy al suo interno (uso il metodo slice per "tagliare" la parte di array che mi occorre)
   }
   if (sessionStorage.getItem("quantity") === "30") {
-    questions = questionEasy.slice();
+    // se ha selezionato easy come difficult e 30 come quantity
+    questions = questionEasy.slice(); //il test avrà 30 domande easy al suo interno (quindi l'intera lunghezza dell'array)
   }
 }
 if (sessionStorage.getItem("difficult") === "Medium") {
+  //in questo caso se l'utente seleziona Medium entrerà successivamente in una di queste 3 condizioni:
   if (sessionStorage.getItem("quantity") === "10") {
+    //difficult = Medium / quantity = 10
     questions = questionMedium.slice(0, -20);
   }
   if (sessionStorage.getItem("quantity") === "20") {
+    //difficult = Medium / quantity = 20
     questions = questionMedium.slice(0, -10);
   }
   if (sessionStorage.getItem("quantity") === "30") {
-    questions = questionMedium.slice();
+    //difficult = Medium / quantity = 30
+    questions = questionMedium.slice(); //slice in questo caso non era necessario
   }
 }
 if (sessionStorage.getItem("difficult") === "Hard") {
+  //in questo caso se l'utente seleziona Hard entrerà successivamente in una di queste 3 condizioni:
   if (sessionStorage.getItem("quantity") === "10") {
+    //difficult = Hard / quantity = 10
     questions = questionHard.slice(0, -20);
   }
   if (sessionStorage.getItem("quantity") === "20") {
+    //difficult = Hard / quantity = 20
     questions = questionHard.slice(0, -10);
   }
   if (sessionStorage.getItem("quantity") === "30") {
-    questions = questionHard.slice();
+    //difficult = Hard / quantity = 30
+    questions = questionHard.slice(); //slice in questo caso non era necessario
   }
 }
 
