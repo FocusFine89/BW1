@@ -7,6 +7,7 @@
   margin-inline: auto;
   padding-top: 6em;
   padding-bottom: 4em;
+  margin-top: 2.5em;
 
   h1 {
     font-size: 4em;
@@ -43,6 +44,7 @@
       padding: 0.5em;
       color: white;
       font-family: "Inter", sans-serif;
+      font-size: 20px;
     }
   }
 }
@@ -62,4 +64,50 @@ button {
   width: 50%;
   margin-inline: auto;
   text-align: center;
+}
+
+.thanks-container {
+  font-size: 3em;
+  text-align: center;
+  line-height: 1.5em;
+  color: white;
+}
+
+.btn-information {
+  margin-top: -16px;
+}
+
+.thanks-container p {
+  margin-top: 3em;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.thanks-container span {
+  font-size: 0.8em;
+  font-weight: 300;
+  font-family: "outfit";
+}
+
+.btn-newtry {
+  font-size: 23px;
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  padding: 10px 10px;
+  text-transform: uppercase;
+}
+p.moreInfoOur {
+  margin-top: 50px;
+  font-size: 0.6em;
+  font-weight: 300;
+  font-family: "outfit";
+}
+p.copyright {
+  color: white;
+  font-size: 10px;
+  margin-top: 90px;
+  font-weight: 200;
+  font-family: "outfit";
 }

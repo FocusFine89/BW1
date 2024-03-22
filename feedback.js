@@ -46,17 +46,36 @@ const addsStars = function () {
 
 addsStars();
 
-const input = document.getElementById("feedbackInput");
+document.getElementById("btn-info").style.display = "none";
+document.querySelector(".copyright").style.display = "none";
 
-input.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    alert("Thanks for your feedback");
-    input.value = "";
-  }
+const btnFeedback = document.getElementById("btn-enter");
+btnFeedback.addEventListener("click", function () {
+  document.getElementById("feedback-container").style.display = "none";
+  document.getElementById("btn-info").style.display = "inline";
+  document.querySelector(".copyright").style.display = "block";
+  let feedback = document.createElement("p");
+  let newTry = document.createElement("span");
+  let btnNewTry = document.createElement("button");
+  let moreInfoOur = document.createElement("p");
+  moreInfoOur.classList.add("moreInfoOur");
+  feedback.innerText = "Thanks for your feedback! Hope you enjoyed that!";
+  newTry.innerText = "Do you want try again?";
+  btnNewTry.innerText = "Welcome Page";
+  btnNewTry.classList.add("btn-newtry");
+  moreInfoOur.innerText =
+    "If you want more information about our courses and our history click here!";
+  btnNewTry.addEventListener("click", function () {
+    window.open("Welcome.html");
+  });
+  document.querySelector(".thanks-container").appendChild(feedback);
+  document.querySelector(".thanks-container").appendChild(newTry);
+  document.querySelector(".thanks-container").appendChild(btnNewTry);
+  document.querySelector(".thanks-container").appendChild(moreInfoOur);
+  document.getElementById("btn-enter").style.display = "none";
 });
 
-const button = document.getElementById("btn-info");
-button.addEventListener("click", function (event) {
-  event.preventDefault();
+const btnInfo = document.getElementById("btn-info");
+btnInfo.addEventListener("click", function () {
   window.open("https://epicode.com/it/", "_blank");
 });
