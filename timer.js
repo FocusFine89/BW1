@@ -1099,8 +1099,9 @@ const generateResults = function () {
       correctColor: "#00FFFF",
     },
   };
-
-  const d = 2.83 * correctAnswers * 10; //
+  const percentGrafico = (correctAnswers / questions.length) * 100;
+  const d = (percentGrafico * 283) / 100;
+  console.log(d);
 
   //IMPORTANTE! MOSTRA PROGRESSO DEL GRAFICO
   pathRemaining.style.strokeDasharray = `${d} 283`;
@@ -1119,8 +1120,12 @@ const generateResults = function () {
   const percentualeGraficoSbagliata = incorrectAnswers * percentuale * 100;
   const percentualeCorretta = document.getElementById("percentuale-corretta");
   const percentualeSbagliata = document.getElementById("percentuale-sbagliata");
-  percentualeCorretta.innerText = `${correctAnswers * 10} %`;
-  percentualeSbagliata.innerText = `${incorrectAnswers * 10} %`;
+  percentualeCorretta.innerText = `${
+    (correctAnswers / questions.length) * 100
+  } %`;
+  percentualeSbagliata.innerText = `${
+    (incorrectAnswers / questions.length) * 100
+  } %`;
   console.log(percentualeGraficoGiusta);
   console.log(percentualeGraficoSbagliata);
 
@@ -1137,4 +1142,7 @@ const generateResults = function () {
     chartText.innerText = `Failed!`;
     testoColorato.innerText = `Not passed the exam`;
   }
+
+  // divido la questions.length diviso 100 per ottenere l'1% della lunghezza dell'array
+  //prendo le risposte corrette, le moltiplico per il valore uscito da questions.length /100 tutto questo *10
 };
