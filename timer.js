@@ -1120,12 +1120,12 @@ const generateResults = function () {
   const percentualeGraficoSbagliata = incorrectAnswers * percentuale * 100;
   const percentualeCorretta = document.getElementById("percentuale-corretta");
   const percentualeSbagliata = document.getElementById("percentuale-sbagliata");
-  percentualeCorretta.innerText = `${
+  percentualeCorretta.innerText = `${Math.floor(
     (correctAnswers / questions.length) * 100
-  } %`;
-  percentualeSbagliata.innerText = `${
+  )} %`;
+  percentualeSbagliata.innerText = `${Math.floor(
     (incorrectAnswers / questions.length) * 100
-  } %`;
+  )} %`;
   console.log(percentualeGraficoGiusta);
   console.log(percentualeGraficoSbagliata);
 
