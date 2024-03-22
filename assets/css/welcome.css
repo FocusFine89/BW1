@@ -37,6 +37,7 @@
       position: relative;
       line-height: 25px;
       font-weight: 300;
+      left: 25px;
     }
   }
   .userSelect {
@@ -134,4 +135,8 @@
     height: 16px;
     width: 22px;
   }
+}
+
+.li-content {
+  width: 1110px;
 }
