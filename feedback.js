@@ -64,7 +64,7 @@ btnFeedback.addEventListener("click", function () {
   moreInfoOur.innerText =
     "If you want more information about our courses and our history click here!";
   btnNewTry.addEventListener("click", function () {
-    window.open("Welcome.html");
+    window.location.href = "Welcome.html";
   });
   document.querySelector(".thanks-container").appendChild(feedback);
   document.querySelector(".thanks-container").appendChild(newTry);
