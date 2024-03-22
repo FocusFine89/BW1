@@ -216,7 +216,7 @@ const questionEasy = [
     difficulty: "easy",
     category: "Science: Computers",
     question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -385,7 +385,7 @@ const questionMedium = [
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question: "FLAC stands for &quot;Free Lossless Audio Condenser&quot;&#039;",
+    question: "FLAC stands for &quot;Free Lossless Audio Condenser;",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -414,7 +414,7 @@ const questionMedium = [
     difficulty: "medium",
     category: "Science: Computers",
     question:
-      "Moore&#039;s law originally stated that the number of transistors on a microprocessor chip would double every...",
+      "Moore's law originally stated that the number of transistors on a microprocessor chip would double every...",
     correct_answer: "Year",
     incorrect_answers: ["Four Years", "Two Years", "Eight Years"],
   },
@@ -477,7 +477,7 @@ const questionMedium = [
     difficulty: "medium",
     category: "Science: Computers",
     question:
-      "The very first recorded computer &quot;bug&quot; was a moth found inside a Harvard Mark II computer.",
+      "The very first recorded computer 'bug' was a moth found inside a Harvard Mark II computer.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -485,8 +485,7 @@ const questionMedium = [
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "It&#039;s not possible to format a write-protected DVD-R Hard Disk.",
+    question: "It's not possible to format a write-protected DVD-R Hard Disk.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -691,7 +690,7 @@ const questionHard = [
     difficulty: "hard",
     category: "Science: Computers",
     question:
-      "Released in 2001, the first edition of Apple&#039;s Mac OS X operating system (version 10.0) was given what animal code name?",
+      "Released in 2001, the first edition of Apple's Mac OS X operating system (version 10.0) was given what animal code name?",
     correct_answer: "Cheetah",
     incorrect_answers: ["Puma", "Tiger", "Leopard"],
   },
