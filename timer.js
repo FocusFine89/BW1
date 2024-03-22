@@ -13,7 +13,7 @@ const questionEasy = [
     difficulty: "easy",
     category: "Science: Computers",
     question:
-      "The programming language &quot;Python&quot; is based off a modified version of &quot;JavaScript&quot;.",
+      "The programming language 'Python' is based off a modified version of 'JavaScript'",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -47,12 +47,8 @@ const questionEasy = [
     category: "Science: Computers",
     question:
       "In any programming language, what is the most common way to iterate through an array?",
-    correct_answer: "&#039;For&#039; loops",
-    incorrect_answers: [
-      "&#039;If&#039; Statements",
-      "&#039;Do-while&#039; loops",
-      "&#039;While&#039; loops",
-    ],
+    correct_answer: "loops",
+    incorrect_answers: ["Statements", "Do-while loops", "loops"],
   },
   {
     type: "multiple",
@@ -76,7 +72,7 @@ const questionEasy = [
     difficulty: "easy",
     category: "Science: Computers",
     question:
-      "If you were to code software in this language you&#039;d only be able to type 0&#039;s and 1&#039;s.",
+      "If you were to code software in this language you only be able to type and 1.",
     correct_answer: "Binary",
     incorrect_answers: ["JavaScript", "C++", "Python"],
   },
@@ -95,7 +91,7 @@ const questionEasy = [
     category: "Science: Computers",
     question: "What does the Prt Sc button do?",
     correct_answer:
-      "Captures what&#039;s on the screen and copies it to your clipboard",
+      "Captures what's on the screen and copies it to your clipboard",
     incorrect_answers: [
       "Nothing",
       "Saves a .png file of what&#039;s on the screen in your screenshots folder in photos",
@@ -174,7 +170,7 @@ const questionEasy = [
     difficulty: "easy",
     category: "Science: Computers",
     question:
-      "In most programming languages, the operator ++ is equivalent to the statement &quot;+= 1&quot;.",
+      "In most programming languages, the operator ++ is equivalent to the statement '+='.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -202,7 +198,7 @@ const questionEasy = [
     type: "multiple",
     difficulty: "easy",
     category: "Science: Computers",
-    question: "What does the &quot;MP&quot; stand for in MP3?",
+    question: "What does the 'MP' stand for in MP3?",
     correct_answer: "Moving Picture",
     incorrect_answers: ["Music Player", "Multi Pass", "Micro Point"],
   },
@@ -250,7 +246,7 @@ const questionEasy = [
     difficulty: "easy",
     category: "Science: Computers",
     question:
-      "The Python programming language gets its name from the British comedy group &quot;Monty Python.&quot;",
+      "The Python programming language gets its name from the British comedy group 'Monty Python'.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -259,7 +255,7 @@ const questionEasy = [
     difficulty: "easy",
     category: "Science: Computers",
     question:
-      "The programming language &#039;Swift&#039; was created to replace what other programming language?",
+      "The programming language 'Swift' was created to replace what other programming language?",
     correct_answer: "Objective-C",
     incorrect_answers: ["C#", "Ruby", "C++"],
   },
@@ -397,7 +393,7 @@ const questionMedium = [
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question: "What does &quot;LCD&quot; stand for?",
+    question: "What does 'LCD' stand for?",
     correct_answer: "Liquid Crystal Display",
     incorrect_answers: [
       "Language Control Design",
@@ -472,7 +468,7 @@ const questionMedium = [
     difficulty: "medium",
     category: "Science: Computers",
     question:
-      "The common software-programming acronym &quot;I18N&quot; comes from the term &quot;Interlocalization&quot;.",
+      "The common software-programming acronym 'I18N' comes from the term 'Interlocalization'.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -527,7 +523,7 @@ const questionMedium = [
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question: "&quot;Windows NT&quot; is a monolithic kernel.",
+    question: "'Windows NT' is a monolithic kernel.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -544,8 +540,7 @@ const questionMedium = [
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "Nvidia&#039;s headquarters are based in which Silicon Valley city?",
+    question: "Nvidia's headquarters are based in which Silicon Valley city?",
     correct_answer: "Santa Clara",
     incorrect_answers: ["Palo Alto", "Cupertino", "Mountain View"],
   },
@@ -625,8 +620,7 @@ const questionHard = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "What was the first company to use the term &quot;Golden Master&quot;?",
+    question: "What was the first company to use the term 'Golden Master'?",
     correct_answer: "Apple",
     incorrect_answers: ["IBM", "Microsoft", "Google"],
   },
@@ -706,13 +700,9 @@ const questionHard = [
     difficulty: "hard",
     category: "Science: Computers",
     question:
-      "According to DeMorgan&#039;s Theorem, the Boolean expression (AB)&#039; is equivalent to:",
-    correct_answer: "A&#039; + B&#039;",
-    incorrect_answers: [
-      "A&#039;B + B&#039;A",
-      "A&#039;B&#039;",
-      "AB&#039; + AB",
-    ],
+      "According to DeMorgan's Theorem, the Boolean expression (AB)' is equivalent to:",
+    correct_answer: "A' + B' ",
+    incorrect_answers: ["A'B + B'A", "A'B;", "AB' + AB"],
   },
   {
     type: "multiple",
