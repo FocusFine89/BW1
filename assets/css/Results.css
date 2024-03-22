@@ -110,8 +110,10 @@ main .questions {
 .base-chart__path-remaining {
   /* imposto la larghezza del svg originale  */
   stroke-width: 15px;
-  transform: rotate(90deg);
+
+  transform: rotate(30deg);
   transform-origin: 50% 50%;
+
   /* ARROTONDAMENTO LINEA COME QUELLA DEL SVG ORIGINALE */
   stroke-linecap: inherit;
 }
