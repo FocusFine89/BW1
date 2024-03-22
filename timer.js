@@ -1138,14 +1138,13 @@ const generateResults = function () {
   percentualeSbagliata.innerText = `${Math.floor(
     (incorrectAnswers / questions.length) * 100
   )} %`;
-  console.log(percentualeGraficoGiusta);
-  console.log(percentualeGraficoSbagliata);
 
+  const pass = Math.floor(questions.length / 2 + 1);
   //INSERISCO TESTO ALL'INTERNO DEL GRAFICO
   const chartText = document.querySelector(".results-questions");
   const testoColorato = document.querySelector(".colorato");
   const testoCertificato = document.querySelector(".testo-certificato p");
-  if (correctAnswers > correctAnswers / 2 + 1) {
+  if (correctAnswers > pass) {
     chartText.innerText = `Congratulations!`;
     testoColorato.innerText = `You passed the exam`;
     testoCertificato.innerText = `We'll send you the certificate in few minutes.
