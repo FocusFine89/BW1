@@ -1,5 +1,9 @@
-let questions = [];
+let questions = []; //modifico la prima versione dell'array da 10 domande usato fino a qui,
+// modifico la tipologia di variabile da const a let in modo da poterla riassegnare e lascio un array vuoto come valore
+//in modo da non dover cambiare la logica usata fino ad ora
+//creo (copio e incollo) 3 array da 30 domande l'uno, e gli assegno un nome differente in base alla difficoltà delle domande contenute
 const questionEasy = [
+  // 30 domande facili
   {
     type: "multiple",
     difficulty: "easy",
@@ -274,6 +278,7 @@ const questionEasy = [
 ];
 
 const questionMedium = [
+  // 30 domande media difficoltà
   {
     type: "multiple",
     difficulty: "medium",
@@ -545,6 +550,7 @@ const questionMedium = [
   },
 ];
 const questionHard = [
+  // 30 domande difficili
   {
     type: "multiple",
     difficulty: "hard",
@@ -822,10 +828,18 @@ const questionHard = [
     correct_answer: "50",
     incorrect_answers: ["59", "60", "25"],
   },
-];
+]; // qui termina l'ultimo dei 3 array
+
+// creo 3 macro condizioni if per le 3 difficolta
+// al loro interno creo rispettivamente 3 if con diverse quantità di domande
+
 if (sessionStorage.getItem("difficult") === "Easy") {
+  //avendo precedentemente legato a difficult difficult.value ora tramite getItem la condizione è in grado di leggere quale difficoltà
+  // ha selezionato l'utente nel campo select , in questo caso se l'utente seleziona Easy entrerà successivamente in una di queste 3 condizioni:
   if (sessionStorage.getItem("quantity") === "10") {
-    questions = questionEasy.slice(0, -20);
+    // se ha selezionato easy come difficult e 10 come quantity
+
+    questions = questionEasy.slice(0, -20); // il test avrà solo 10 easy domande al suo interno (uso il metodo slice per "tagliare" la parte di array che mi occorre)
   }
   if (sessionStorage.getItem("quantity") === "20") {
     questions = questionEasy.slice(0, -10);
