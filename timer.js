@@ -1122,7 +1122,7 @@ const generateResults = function () {
   const chartText = document.querySelector(".results-questions");
   const testoColorato = document.querySelector(".colorato");
   const testoCertificato = document.querySelector(".testo-certificato p");
-  if (correctAnswers > 5) {
+  if (correctAnswers > correctAnswers / 2 + 1) {
     chartText.innerText = `Congratulations!`;
     testoColorato.innerText = `You passed the exam`;
     testoCertificato.innerText = `We'll send you the certificate in few minutes.
